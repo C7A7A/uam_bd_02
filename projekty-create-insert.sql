@@ -1,24 +1,24 @@
 /* Baza Projekty, v. 2020-02-20 */
 
---USE master;
---DROP DATABASE Projekty;
---GO
-
---CREATE DATABASE Projekty;
---GO
-
---USE Projekty;
---GO
-
-SET LANGUAGE polski;
+USE master;
+DROP DATABASE Projekty;
 GO
+
+CREATE DATABASE Projekty;
+GO
+
+USE Projekty;
+GO
+
+--SET LANGUAGE polski;
+--GO
 
 -------- USUŃ TABELE --------
 
-DROP TABLE IF EXISTS Realizacje;
-DROP TABLE IF EXISTS Projekty;
-DROP TABLE IF EXISTS Pracownicy;
-DROP TABLE IF EXISTS Stanowiska;
+--DROP TABLE IF EXISTS Realizacje;
+--DROP TABLE IF EXISTS Projekty;
+--DROP TABLE IF EXISTS Pracownicy;
+--DROP TABLE IF EXISTS Stanowiska;
 
 --------- CREATE - UTWÓRZ TABELE I POWIĄZANIA --------
 

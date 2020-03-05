@@ -1,19 +1,19 @@
---USE master;
---DROP DATABASE II_Wojna_Swiatowa;
---GO
+USE master;
+DROP DATABASE II_Wojna_Swiatowa;
+GO
 
---CREATE DATABASE II_Wojna_Swiatowa;
---GO
+CREATE DATABASE II_Wojna_Swiatowa;
+GO
 
---USE II_Wojna_Swiatowa;
---GO
+USE II_Wojna_Swiatowa;
+GO
 
 ------------ USUÑ TABELE ------------
 
-DROP TABLE IF EXISTS Skutki;
-DROP TABLE IF EXISTS Bitwy;
-DROP TABLE IF EXISTS Okrety;
-DROP TABLE IF EXISTS Klasy;
+--DROP TABLE IF EXISTS Skutki;
+--DROP TABLE IF EXISTS Bitwy;
+--DROP TABLE IF EXISTS Okrety;
+--DROP TABLE IF EXISTS Klasy;
 
 --DROP TABLE Skutki, Bitwy, Okrety, Klasy
 
