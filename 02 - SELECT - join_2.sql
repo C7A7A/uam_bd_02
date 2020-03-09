@@ -94,14 +94,16 @@ FROM Pracownicy P
 			AND R.idProj = 10
 WHERE R.idProj iS NULL;
 
--- zadanie 10 TODO
-SELECT P.nazwisko, Pr.id AS [kieruje projektem], R.idProj AS [pracuje w projekcie]
-FROM Realizacje R
-	JOIN Projekty Pr
-		ON R.idPrac = Pr.kierownik
-			AND Pr.id <> R.idProj
-	RIGHT OUTER JOIN Pracownicy P
-		ON P.id = R.idPrac
+-- zadanie 10 
+SELECT P.nazwisko, Pr.id AS [kieruje projektem], R.idPrac AS [pracuje w projekcie]
+FROM Pracownicy P
+	JOIN Projekty Pr 
+		ON P.id = Pr.kierownik
+	LEFT OUTER JOIN Realizacje R
+		ON R.idProj = Pr.id AND
+		   R.idPrac = Pr.kierownik
+WHERE
+	R.idPrac IS NULL;
 
 -- przyk³ad 7
 SELECT *
@@ -124,25 +126,95 @@ WHERE P2.placa IS NULL;
 
 -- æwiczenia dodatkowe
 -- i
+SELECT Pr.nazwa
+FROM Pracownicy P
+	JOIN Projekty Pr
+		ON P.id = Pr.kierownik
+WHERE P.nazwisko = 'Mielcarz'
 
 -- ii
+SELECT Pr.nazwa
+FROM Pracownicy P
+	JOIN Realizacje R
+		ON P.id = R.idPrac
+	JOIN Projekty Pr
+		ON R.idProj = Pr.id
+WHERE P.nazwisko = 'Andrzejewicz';
+		
 
 -- iii
+SELECT P.nazwisko, P.placa, (
+	SELECT P.placa
+	FROM Pracownicy P
+	WHERE P.nazwisko = 'Ró¿ycka'
+) AS [placa Ró¿yckiej]
+FROM Pracownicy P
+WHERE P.placa > (
+	SELECT P.placa AS [placa Ró¿yckiej]
+	FROM Pracownicy P
+	WHERE P.nazwisko = 'Ró¿ycka'
+)
 
 -- iv
+SELECT Pr.nazwa
+FROM Pracownicy P
+	 JOIN Realizacje R
+	   ON R.idPrac = P.id
+	 RIGHT OUTER JOIN Projekty Pr
+	   ON Pr.id = R.idProj
+	   AND P.stanowisko = 'doktorant'
+WHERE P.id IS NULL;
 
 -- Zadania domowe
+SELECT * FROM Bitwy;
+SELECT * FROM Okrety;
+SELECT * FROM Skutki;
+SELECT * FROM Klasy;
+
 -- i
+SELECT O.nazwa
+FROM Okrety O
+JOIN Klasy K
+	ON O.klasa = K.klasa
+WHERE K.wypornosc > 35000;
 
 -- ii
+SELECT O.nazwa, K.wypornosc, K.liczbaDzial
+FROM Okrety O
+	JOIN Klasy K
+		ON O.klasa = K.klasa
+	JOIN Skutki S
+		ON S.okret = O.nazwa
+	JOIN Bitwy B
+		ON B.nazwa = S.bitwa
+WHERE B.nazwa = 'Guadalcanal';
 
--- iii
+-- iii TODO
+SELECT K.kraj, K.typ
+FROM Okrety O
+	JOIN Klasy K
+		ON K.klasa = O.klasa
+WHERE typ IN('pn', 'kr')
 
 -- iv
+SELECT K.klasa, K.typ, K.kraj, K.liczbaDzial, K.kaliber, K.wypornosc, O.nazwa, O.klasa, O.zwodowano
+FROM Okrety O
+	JOIN Klasy K
+		ON O.klasa = K.klasa
 
 -- v
+SELECT S.okret, K.wypornosc, K.liczbaDzial
+FROM Klasy K
+	RIGHT OUTER JOIN Okrety O
+		ON O.klasa = K.klasa
+	RIGHT OUTER JOIN Skutki S
+		ON S.okret = O.nazwa
+	JOIN Bitwy B
+		ON B.nazwa = S.bitwa
+WHERE B.nazwa = 'Guadalcanal';
 
 -- vi
+
 
 -- vii
 
