@@ -102,8 +102,7 @@ FROM Pracownicy P
 	LEFT OUTER JOIN Realizacje R
 		ON R.idProj = Pr.id AND
 		   R.idPrac = Pr.kierownik
-WHERE
-	R.idPrac IS NULL;
+WHERE R.idPrac IS NULL;
 
 -- przyk³ad 7
 SELECT *
@@ -190,11 +189,6 @@ FROM Okrety O
 WHERE B.nazwa = 'Guadalcanal';
 
 -- iii TODO
-SELECT K.kraj, K.typ
-FROM Okrety O
-	JOIN Klasy K
-		ON K.klasa = O.klasa
-WHERE typ IN('pn', 'kr')
 
 -- iv
 SELECT K.klasa, K.typ, K.kraj, K.liczbaDzial, K.kaliber, K.wypornosc, O.nazwa, O.klasa, O.zwodowano
@@ -214,10 +208,25 @@ FROM Klasy K
 WHERE B.nazwa = 'Guadalcanal';
 
 -- vi
+SELECT K.klasa
+FROM Klasy K
+	LEFT OUTER JOIN Okrety O
+		ON K.klasa = O.klasa
+WHERE O.nazwa IS NULL;
 
+-- vii 
+SELECT K1.kraj
+FROM Klasy K1
+	LEFT OUTER JOIN Klasy K2
+		ON K1.liczbaDzial < K2.liczbaDzial
+WHERE K2.liczbaDzial IS NULL;
 
--- vii
+-- viii TODO
 
--- viii
+-- zapisz inaczej TODO
+SELECT *
+FROM   Kolory K
+       CROSS JOIN Cechy C;
 
--- zapisz inaczej
+SELECT *
+FROM Kolory, Cechy;
