@@ -123,10 +123,23 @@ FROM Pracownicy P
 
 -- zadanie domowe
 -- i
+SELECT COUNT(K.klasa) AS [liczba klas]
+FROM Klasy K
+WHERE K.typ = 'pn';
 
 -- ii
+SELECT O.klasa, MAX(O.zwodowano) AS [pierwsze wodowanie]
+FROM Okrety O
+WHERE O.zwodowano IS NOT NULL
+GROUP BY O.klasa;
 
--- iii
+-- iii 
+SELECT ISNULL(O.klasa, 'nieznany') AS [klasa], COUNT(S.efekt) [zatopionych]
+FROM Okrety O
+	RIGHT JOIN Skutki S
+		ON O.nazwa = S.okret
+WHERE S.efekt = 'zatopiony'
+GROUP BY O.klasa;
 
 -- iv
 
