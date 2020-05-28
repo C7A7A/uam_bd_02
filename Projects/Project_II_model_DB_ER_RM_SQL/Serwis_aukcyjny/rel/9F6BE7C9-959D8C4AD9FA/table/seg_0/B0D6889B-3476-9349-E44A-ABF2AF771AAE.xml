@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B0D6889B-3476-9349-E44A-ABF2AF771AAE" name="Dostawy">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>BA9215B4-3F6F-43A8-679F-1F6C12FB82E9</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="3284EF13-C3F5-17AC-0B82-841327FAA0EA">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>2707B4FC-C9B3-FDC8-6DC1-8B44938A1A2E</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nazwa" id="2A669C32-416D-A574-9003-636181A09CA8">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>5A702092-424D-C553-C1C4-09EBAF462947</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="firma" id="366DA719-D95A-7B86-1E6A-14D2CF0F9A26">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>25E468B7-A205-34C6-4965-E9A87BE41CEE</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cena" id="0030702C-F9EE-149F-38F7-30FCF9AA44AC">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>87686FCC-66CF-5B54-D99E-6DAD8A438D34</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C94AEFEF-B141-737D-FA2A-2BA2170B5CC5" name="Dostawy_PK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>103509A0-DB82-FD45-E539-CCF0DE80C3C7</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3284EF13-C3F5-17AC-0B82-841327FAA0EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

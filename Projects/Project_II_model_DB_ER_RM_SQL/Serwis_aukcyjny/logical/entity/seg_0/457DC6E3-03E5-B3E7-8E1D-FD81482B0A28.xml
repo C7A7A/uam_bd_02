@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="457DC6E3-03E5-B3E7-8E1D-FD81482B0A28" name="Użytkownicy">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 10:57:58 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="login" id="BACA342D-766D-D5F0-86DE-15A63AF8D474">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 10:58:13 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="imię" id="3B9D7138-48DD-EA26-385D-E5E9C0A95F45">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 10:58:36 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwisko" id="25068430-CAC5-4E6B-CC03-77659AE099B7">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 10:59:40 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="adres_zamieszkania" id="41CC8A17-60B9-8FC0-38FA-1D454A024E22">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 10:59:48 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="e-mail" id="3CC671CC-5268-BC7A-3975-71EBB5F77364">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:00:10 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numer_konta" id="841ABEAA-C68E-5F6A-B5CE-1A90C956DB51">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:00:20 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>26</dataTypePrecision>
+<ownDataTypeParameters>,26,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="adres_dostawy" id="F2E1BE09-F285-F2BB-EC78-A8809341AA0D">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:00:39 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefon" id="6331DCF4-747B-DEBF-25E3-3F605DC2C565">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:00:53 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="95DE5403-0F09-2DB2-8885-479F3C7DB547" name="Użytkownicy PK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 10:58:33 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BACA342D-766D-D5F0-86DE-15A63AF8D474</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

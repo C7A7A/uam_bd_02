@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="składa" directorySegmentName="seg_0" id="24EF8FA0-D567-5C23-858A-7A9EF1C0A232">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:25:23 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<sourcePk>95DE5403-0F09-2DB2-8885-479F3C7DB547</sourcePk>
+<identifying>true</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>457DC6E3-03E5-B3E7-8E1D-FD81482B0A28</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EBB25C90-0280-FEA2-A082-A67688BF2063</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

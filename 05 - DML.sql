@@ -24,7 +24,7 @@ VALUES ('12312312312', 'Czajka', 'czmateusz@XD.pl');
 INSERT INTO Udzial
 VALUES (
 	'12312312312',
-	'200',
+	(SELECT kod FROM Kursy WHERE nazwa='Analiza danych'),
 	'2017-10-20',
 	'2017-10-22',
 	'ukonczony'
@@ -51,8 +51,9 @@ SELECT miasto FROM Uczestnicy;
 
 UPDATE Uczestnicy
 SET miasto = MapujMiasta.forma_poprawna
-FROM MapujMiasta
-WHERE miasto = MapujMiasta.forma_niepoprawna;
+FROM Uczestnicy
+	INNER JOIN MapujMiasta
+	ON miasto = MapujMiasta.forma_niepoprawna;
 
 -- zad 5
 SELECT * FROM Uczestnicy;

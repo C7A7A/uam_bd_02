@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3BBADD69-E03E-CF68-720B-257B2117906B" name="Kategorie">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>3868564D-3BD1-45D7-24D2-5EA6F7567C3C</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B01AEF6E-B567-F51F-CFE2-C1749EBE3A85">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>F1C579D2-B22C-21F7-A953-A7ECA8EDEAE5</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="opis" id="BA0C554F-DBE8-963F-D48C-7038CC279CD9">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>8F571A33-E441-F6C2-9509-505C9A52D142</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4662A4AF-DAC0-114F-1732-1571EA6C8119" name="Kategorie_PK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>C8E0E5C9-C2F5-7A9E-1FAD-D30A3983727E</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B01AEF6E-B567-F51F-CFE2-C1749EBE3A85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

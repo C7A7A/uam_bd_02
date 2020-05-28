@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Licytacje_Statusy" directorySegmentName="seg_0" id="CE5C1D55-E6EA-D379-119F-88294301A21C">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:17:17 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="F7517482-3401-FA20-D7D5-F267ACA23312" value="true"/>
+</engineerTo>
+<sourcePk>B7D11F70-B0BF-DF71-3034-3ED50F2A0F96</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F3E198B2-1BBE-C8F7-5731-54F73A8541CC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6FA1A215-12B4-EC40-053A-6E8B6BB8A4D3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -14,3 +14,8 @@ SELECT * FROM Udzial;
 
 SELECT * FROM MapujMiasta;
 SELECT * FROM UczestnicyAktualnie;
+
+SELECT * FROM Produkt;
+SELECT * FROM PC;
+SELECT * FROM Laptop;
+SELECT * FROM Drukarka;

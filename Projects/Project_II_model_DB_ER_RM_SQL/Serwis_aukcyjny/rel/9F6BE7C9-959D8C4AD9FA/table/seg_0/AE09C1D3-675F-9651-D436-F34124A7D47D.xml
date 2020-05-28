@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AE09C1D3-675F-9651-D436-F34124A7D47D" name="Opcje_Dostawy">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Przedmioty_numer" id="AC0697C3-4E56-6861-6058-D74D78B7A719">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0F6FC24A-E35C-CEAF-4297-661F8C1352B6" referredColumn="7572A40F-6373-590B-A6CA-9C94EBA6D4D7"/>
+</associations>
+</Column>
+<Column name="Dostawy_id" id="559BD4DE-66CE-BEEA-08FB-6BE7F73734D8">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="726A0E0D-095F-07B4-FDC5-33B08E7FD7E5" referredColumn="3284EF13-C3F5-17AC-0B82-841327FAA0EA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9F7C780-03A7-B67F-CC3F-718AA471AAA2" name="Opcje_Dostawy_PK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC0697C3-4E56-6861-6058-D74D78B7A719"/>
+<colUsage columnID="559BD4DE-66CE-BEEA-08FB-6BE7F73734D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2FCF572-EB35-5514-6598-10764FA81E65" name="Opcje_Dostawy_Przedmioty_FK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>280E5185-4E76-54FB-42E8-BC9118643DAD</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AC0697C3-4E56-6861-6058-D74D78B7A719"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CE50F568-F159-C694-1CD7-E58EEA1B85A7" name="Opcje_Dostawy_Dostawy_FK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>280E5185-4E76-54FB-42E8-BC9118643DAD</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="559BD4DE-66CE-BEEA-08FB-6BE7F73734D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

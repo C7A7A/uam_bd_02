@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Serwis_aukcyjny" id="9225F744-686E-FCE1-3483-766C49089A3D" version="3.5">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 10:48:06 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>9225F744-686E-FCE1-3483-766C49089A3D</designId>
+</OSDM_Design>

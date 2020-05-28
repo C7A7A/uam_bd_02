@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="EBB25C90-0280-FEA2-A082-A67688BF2063" name="Oferty">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:10:11 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="data" id="8A0E2A81-4947-21E9-1DC8-E98B774A0635">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:11:38 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="godzina" id="1DF62790-9D99-E6E5-35FE-167A3AE907F6">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:11:51 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="kwota" id="8AD9DFAC-6DB1-D31F-43F6-895FEC43EECC">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:12:13 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="login" id="DA3AAC39-F343-785D-8A92-0F9BFB119201">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:25:23 UTC</createdTime>
+<generatorID>24EF8FA0-D567-5C23-858A-7A9EF1C0A232</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<referedAttribute>BACA342D-766D-D5F0-86DE-15A63AF8D474</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_licytacja" id="62DCCD60-43C0-2C8C-006A-D665F74BD814">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:25:54 UTC</createdTime>
+<generatorID>6FFA9FF0-B151-1729-CB79-356E292BFCB7</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<referedAttribute>021FAC09-64EE-18CD-9678-8EEA28EA99B8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8AEE3773-0815-D81A-BC6C-80288C1FABDF" name="Oferty PK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-13 11:11:37 UTC</createdTime>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<engineerTo>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DA3AAC39-F343-785D-8A92-0F9BFB119201</attributeRef>
+<attributeRef>62DCCD60-43C0-2C8C-006A-D665F74BD814</attributeRef>
+<attributeRef>8A0E2A81-4947-21E9-1DC8-E98B774A0635</attributeRef>
+<attributeRef>1DF62790-9D99-E6E5-35FE-167A3AE907F6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

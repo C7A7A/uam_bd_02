@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C7C46854-BEEF-A750-4127-7BD73030844A" containerWithKeyObject="DD2D8705-FD95-EB82-38D0-E10853C6EB5D" localFKIndex="C061EFF1-7FBD-FA19-CE8F-9CD7995994C2" name="Licytacje_Statusy_FK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-20 20:48:27 UTC</createdTime>
+<generatorID>CE5C1D55-E6EA-D379-119F-88294301A21C</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<referredTableLongName>Statusy</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E6B3B19A-F3D7-5DB3-DD5C-00C113BDCAC6</referredTableID>
+<keyObject>B4B6AA37-8F24-09F7-7DA4-62D39091EF56</keyObject>
+<referredKeyID>B4B6AA37-8F24-09F7-7DA4-62D39091EF56</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

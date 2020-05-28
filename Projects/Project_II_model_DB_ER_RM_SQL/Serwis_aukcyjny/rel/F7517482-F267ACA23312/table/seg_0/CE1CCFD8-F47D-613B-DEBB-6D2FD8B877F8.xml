@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CE1CCFD8-F47D-613B-DEBB-6D2FD8B877F8" name="Licytacje">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>6FA1A215-12B4-EC40-053A-6E8B6BB8A4D3</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="40270FE5-55DC-2E1E-E32C-832E63126D39">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>021FAC09-64EE-18CD-9678-8EEA28EA99B8</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_rozpoczęcia" id="26A9270C-B755-C9A7-CC79-559C49C6B93D">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>2EE28A58-7ECC-6CC3-467B-835F8D1A1E54</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_zakończenia" id="4C1F357E-35E8-1140-E69D-852FBEC356A5">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>6840E8BB-AA3B-E6AF-0E79-032216D7182B</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Statusy_id" id="384638FB-887B-0BA3-5901-9F89CC7137C7">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>95E92275-613F-3CEB-EA7A-FA0195513631</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CF4C6DDF-A6F1-AA9D-575B-6B2BA4CCE551" referredColumn="1E57DF3D-7FB9-B952-E698-4EB219AB7177"/>
+</associations>
+</Column>
+<Column name="Przedmioty_numer" id="ADF158DC-1423-20DE-9667-9E94E2AD399A">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>ED44F26C-C6DB-0F70-2BE5-C589E59035EA</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4466A622-A8BB-BE1F-26DA-F020D99F4E9D" referredColumn="644B4C49-8D4F-734B-3D41-C2A45C9BBA4C"/>
+</associations>
+</Column>
+<Column name="Użytkownicy_login" id="A281C53A-2DF1-81D9-A88D-15DA56C90F0D">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>80F77C95-C556-5F6D-CE03-2F27404D6A47</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F613F2F4-C640-4AD9-85C0-B0387D56C7D9" referredColumn="0C5367C2-0E01-E143-48B9-DBEA425F7FD1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7BCF9507-4A0A-CD7F-1F5F-C8FA665B1557" name="Licytacje_PK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>B8C6A755-ED64-35AD-D61E-A09BAE9AA163</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="40270FE5-55DC-2E1E-E32C-832E63126D39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F6DF3B29-E8F0-D068-999A-092FB85C891E" name="Licytacje_Statusy_FK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>CE5C1D55-E6EA-D379-119F-88294301A21C</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="384638FB-887B-0BA3-5901-9F89CC7137C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B01837EF-7E40-9D36-2D49-9E3DF3F10052" name="Licytacje_Przedmioty_FK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>6FC9D209-1C99-AA5F-2206-FCE5CD1BAFCE</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ADF158DC-1423-20DE-9667-9E94E2AD399A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="172D3F0F-D4EE-A670-BA9B-0955FFC70AF3" name="Licytacje_Użytkownicy_FK">
+<createdBy>matcza5</createdBy>
+<createdTime>2020-05-14 13:26:41 UTC</createdTime>
+<generatorID>EA7EE15F-C5F7-2F12-47CE-A1F983EA1FE8</generatorID>
+<ownerDesignName>Serwis_aukcyjny</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A281C53A-2DF1-81D9-A88D-15DA56C90F0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
