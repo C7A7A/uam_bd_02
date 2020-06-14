@@ -45,7 +45,7 @@ GO
 
 CREATE TABLE Przedmioty 
     (
-     numer INTEGER NOT NULL, 
+     numer INTEGER NOT NULL IDENTITY, 
      nazwa VARCHAR (150) NOT NULL, 
      cena_wyjœciowa DECIMAL (6,2) NOT NULL, 
      id_kategoria INTEGER NOT NULL, 
@@ -68,7 +68,7 @@ GO
 
 CREATE TABLE Kategorie 
     (
-     id INTEGER NOT NULL, 
+     id INTEGER NOT NULL IDENTITY, 
      opis VARCHAR (150) NOT NULL 
     )
 GO
@@ -85,7 +85,7 @@ GO
 
 CREATE TABLE Licytacje 
     (
-     id INTEGER NOT NULL, 
+     id INTEGER NOT NULL IDENTITY, 
      data_rozpoczêcia DATE NOT NULL, 
      data_zakoñczenia DATE, 
      id_status INTEGER NOT NULL, 
@@ -114,7 +114,7 @@ GO
 
 CREATE TABLE Statusy 
     (
-     id INTEGER NOT NULL, 
+     id INTEGER NOT NULL IDENTITY, 
      opis VARCHAR (150) NOT NULL 
     )
 GO
@@ -160,7 +160,7 @@ GO
 
 CREATE TABLE Dostawy 
     (
-     id INTEGER NOT NULL, 
+     id INTEGER NOT NULL IDENTITY, 
      nazwa VARCHAR (100) NOT NULL, 
      firma VARCHAR (150) NOT NULL, 
      cena DECIMAL (6,2) NOT NULL 
@@ -202,31 +202,30 @@ INSERT INTO U¿ytkownicy(login, imiê, nazwisko, adres_zamieszkania, [e-mail],
 	('licytator123', 'Adrianna', 'Marciniak', 'ul. Marcin 1, 77-123 Wroc³aw', 'Adr@gmail.com', NULL, NULL, NULL),
 	('useruser', 'Tomasz', '£apka', 'ul. Akacjowa 18, Kraków', 'user@interia.pl', NULL, 'ul. Marcin 1, 77-123 Wroc³aw', NULL);
 
-INSERT INTO Kategorie(id, opis) VALUES
-	(1, 'zabawka'),
-	(2, 'ksi¹¿ka'),
-	(3, 'p³yta muzyczna'),
-	(4, 'gra'),
-	(5, 'RTV');
+INSERT INTO Kategorie(opis) VALUES
+	('zabawka'),
+	('ksi¹¿ka'),
+	('p³yta muzyczna'),
+	('gra'),
+	('RTV');
 
-INSERT INTO Przedmioty(numer, nazwa, cena_wyjœciowa, id_kategoria, opis, cena_zakupu, login) VALUES
-	(1, 'drewniane szachy', 80, 4, 'Stare szachy wykonane z drewna, bardzo dobry stan', NULL, 'licytator123'),
-	(2, 'ABC - alfabet dla najm³odszych!', 5, 2, NULL, 1, 'hahahahaxD'),
-	(3, 'PlayStation 5', 1300, 5, 'Konsola + pakiet gier', 1800, 'useruser'),
-	(4, 'Seer', 50, 3, 'album Seer zespo³u Swans', 80, 'hahahahaxD'),
-	(5, 'figurki rycerzy', 70, 1, '100 ma³ych figurek', 120, 'licytator123');
+INSERT INTO Przedmioty(nazwa, cena_wyjœciowa, id_kategoria, opis, cena_zakupu, login) VALUES
+	('drewniane szachy', 80, 4, 'Stare szachy wykonane z drewna, bardzo dobry stan', NULL, 'licytator123'),
+	('ABC - alfabet dla najm³odszych!', 5, 2, NULL, 1, 'hahahahaxD'),
+	('PlayStation 5', 1300, 5, 'Konsola + pakiet gier', 1800, 'useruser'),
+	('Seer', 50, 3, 'album Seer zespo³u Swans', 80, 'hahahahaxD');
 
-INSERT INTO Statusy(id, opis) VALUES
-	(1, 'w trakcie'),
-	(2, 'zakoñczona kupnem'),
-	(3, 'zakoñczona bez kupna');
+INSERT INTO Statusy(opis) VALUES
+	('w trakcie'),
+	('zakoñczona kupnem'),
+	('zakoñczona bez kupna');
 
-INSERT INTO Licytacje(id, data_rozpoczêcia, data_zakoñczenia, id_status, numer_przedmiot, zwyciêzca) VALUES
-	(1, '19-05-2020', '21-05-2020', 2, 1, 'hahahahaxD'),
-	(2, '19-05-2020', '30-05-2020', 1, 2, NULL),
-	(3, '19-05-2020', '22-05-2020', 2, 3, 'licytator123'),
-	(4, '14-05-2020', '20-05-2020', 3, 4, NULL),
-	(5, '24-05-2020', NULL, 1, 4, NULL);
+INSERT INTO Licytacje(data_rozpoczêcia, data_zakoñczenia, id_status, numer_przedmiot, zwyciêzca) VALUES
+	('19-05-2020', '21-05-2020', 2, 1, 'hahahahaxD'),
+	('19-05-2020', '30-05-2020', 3, 2, NULL),
+	('19-05-2020', '22-05-2020', 2, 3, 'licytator123'),
+	('14-05-2020', '20-05-2020', 3, 4, NULL),
+	('24-05-2020', NULL, 1, 4, NULL);
 
 INSERT INTO Oferty(data, godzina, kwota, login, id_licytacja) VALUES
 	('20-05-2020', '23:20:05', 100, 'hahahahaxD', 1),
@@ -237,10 +236,10 @@ INSERT INTO Oferty(data, godzina, kwota, login, id_licytacja) VALUES
 	('22-05-2020', '15:01:25', 1500, 'licytator123', 3),
 	('24-05-2020', '10:05:47', 65, 'licytator123', 5);
 
-INSERT INTO Dostawy(id, nazwa, firma, cena) VALUES
-	(1, 'Paczkomat', 'Inpost', 12),
-	(2, 'Kurier', 'UPC', 15),
-	(3, 'Kurier', 'Firma kurierska', 14);
+INSERT INTO Dostawy(nazwa, firma, cena) VALUES
+	('Paczkomat', 'Inpost', 12),
+	('Kurier', 'UPC', 15),
+	('Kurier', 'Firma kurierska', 14);
 
 INSERT INTO Opcje_Dostawy(numer_przedmiot, id_dostawa) VALUES
 	(1, 1),
@@ -248,8 +247,7 @@ INSERT INTO Opcje_Dostawy(numer_przedmiot, id_dostawa) VALUES
 	(1, 3),
 	(2, 1),
 	(3, 1),
-	(4, 2),
-	(5, 3);
+	(4, 2);
 	
 -- SELECT
 SELECT * FROM U¿ytkownicy;

@@ -4,11 +4,11 @@
 <createdTime>2020-05-13 11:29:18 UTC</createdTime>
 <ownerDesignName>Serwis_aukcyjny</ownerDesignName>
 <engineerTo>
-<item key="F7517482-3401-FA20-D7D5-F267ACA23312" value="true"/>
+<item key="9F6BE7C9-2DAC-3043-3275-959D8C4AD9FA" value="true"/>
 </engineerTo>
 <identifying>false</identifying>
 <optionalSource>false</optionalSource>
-<optionalTarget>false</optionalTarget>
+<optionalTarget>true</optionalTarget>
 <sourceCardinality>*</sourceCardinality>
 <sourceEntity>707F67B5-AF3C-B9A3-E143-91DF41737D2B</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
