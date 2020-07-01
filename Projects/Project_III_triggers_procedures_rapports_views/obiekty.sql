@@ -203,9 +203,11 @@ BEGIN
 			SELECT @login = login, @auction = id_licytacja
 			FROM inserted;
 		END;
-			IF	@auction IN (SELECT numer
-							 FROM Przedmioty
-							 WHERE login = @login)
+			IF	@auction IN (SELECT id
+							 FROM	Licytacje L
+							 JOIN	Przedmioty P
+							   ON	L.numer_przedmiot = P.numer
+							 WHERE	login = @login)
 				BEGIN
 					RAISERROR('Nie mo¿esz licytowaæ swojego przedmiotu', 11, 1);
 					ROLLBACK TRANSACTION;

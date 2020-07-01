@@ -1,0 +1,82 @@
+- klucz minimalny - żaden jego podzbiór nie wyznacza wszystkich innych atrybutów relacji
+- nadklucz(superklucz) - klucz który nie jest minimalny
+- klucz kandydujący - klucz minimalny, wyznacza wszystkie inne atrybuty relacji
+- klucz podstawowy - klucz wybrany spośród kluczy kandydujących
+
+- atrybut kluczowy - atrybut nalężący do któregoś z kluczy kandydujących
+- atrybut niekluczowy - nie należy do któregoś z kluczy kandydujących
+
+
+- baza minimalna - najmniejszy zbiór, z którego nie da się już usunąć żadnej zależności bez utraty jakichś więzów, 
+				 a da się z niego wyprowadzić wszystkie zachodzące w schemacie zależności funkcyjne.
+				 
+
+1NF
+- wartości atrybutów sa atomowe
+- jest klucz podstawowy
+- zależny od klucza
+
+2NF
+- każdy atrybut niekluczowy jest w pełni funkcyjnie zależny od klucza
+- zależny od CAŁEGO klucza
+
+Sprawdź czy jest w 2NF:
+znajdź klucz -> sprawdź czy każdy atrybut nieluczowy jest zależny od całego klucza 
+
+Algorytm sprowadzania do 2NF:
+1. znajdź klucz
+2. znajdź zależności częściowe od klucza – czyli takie, które „psują” drugą postać normalną
+3. jeśli takie zależności istnieją wybierz jedną z nich, i według niej rozłóż schemat na dwie części, korzystając z tw. o rozkładalności
+
+3NF
+- jest w 2NF i żaden atrybut niekluczowy nie jest przechodnio zależny od żadnego klucza 
+- atrybuty niekluczowe są zależne TYLKO od klucza
+
+Algorytm sprowadzania do 3NF:
+123. to samo co w 2NF
+4. weryfikujemy zależności funkcyjne - jesli istnieje zależność przechodnia to dzielimy schemat według niej
+
+
+Algorytm syntezy przebiega następująco:
+- Znajdź bazę minimalną F_min 
+- Znajdz wszystkie zależności funkcyjne, które mają X z lewej strony i stwórz schemat, który będzie zawierał atrybut X oraz wszystkie atrybuty z niego wynikające 
+- Wykonaj ten krok dla każdego atrybutu w F_min 
+- Jeżeli z żadnym ze stworzonych schematów nie ma dowolnego z kluczy,  to dodaj nowy schemat zawierający którykolwiek z kluczy
+- Jeżeli jakiś schemat zawiera się w innym to je połącz
+
+
+Indeks niegrupujący (nieklastrujący)
+- "indeks na końcu książki"
+- osobny plik 
+- może być wiele
+
+Indekst grupujący (klastrujący)
+- "książka  telefoniczna, słownik"
+- posortowanie samych danych, ten sam plik
+- nierozłączny z tabelą, fizycznie ją porządkuje, może być tylko jeden
+
+
+ACID:
+- Atomicity (atomowość) - czyli: wszystko albo nic; każda transakcja stanowi pojedynczą i niepodzielną jednostkę przetwarzania (a także odtwarzania) –
+w transakcji nie ma więc podtransakcji. Każda transakcja jest bądź wykonana w całości, bądź też żaden jej efekt nie jest widoczny w bazie danych.
+- Consistency (spójnosć) – transakcja rozpoczyna się w spójnym stanie bazy danych i pozostawia bazę danych w stanie spójnym (tym samym lub innym). 
+Jeśli transakcja narusza warunki spójności bazy danych, to zostaje odrzucona.
+- Isolation (odizolowanie) – zmiany wykonywane przez transakcję nie zatwierdzoną nie są widziane przez inne transakcje 
+(chyba, że przyjęty poziom izolacji na to zezwala).
+- Duration (trwałość) – zmiany w bazie danych dokonane przez transakcję zatwierdzoną są trwałe w bazie danych, 
+tzn. nawet w przypadku awarii systemu musi istnieć możliwość ich odtworzenia
+
+Konfliktowość danych
+▪ Konflikt WW (zapis-zapis)
+▪ Konflikt RW (odczyt-zapis)
+▪ Konflikt WR (zapis-odczyt)
+
+Poziomy izolacji				Operacje konfliktowe	Anomalie
+Poziom 0 - READ UNCOMMITTED		WW						brudne czytanie, powtórne czytanie, fantomy
+Poziom 1 - READ COMMITTED		WW, WR					powtórne czytanie, fantomy
+Poziom 2 - REPEATABLE READ		WW, WR, RW				fantomy
+Poziom 3 - SERIALIZABLE			WW, WR, RW
+
+- Dirty read (brudne czytanie) WR - transakcja czyta niezatwierdzone dane z innej transakcji i zostaje zatwierdzona przed transakcją, z której czytała
+- Powtórne czytanie RW - dopuszczalne jest zapisywanie w niezatwierdzonych transakcjach
+- Fantomy - przy ponownym odczycie danych pojawiają się wiersze których nie było przy 1 odczycie

@@ -48,7 +48,6 @@ EXEC finish_auction 7; -- licytacja zakoñczona bez kupna
 -- U¿ytkownik nie mo¿e licytowaæ swojego w³asnego przedmiotu
 DECLARE @today_4 DATE;
 SELECT	@today_4 = GETDATE();
-
 INSERT INTO Oferty(data, godzina, kwota, login, id_licytacja)
 VALUES(@today_4, '23:20:05', 100, 'aukcjonerXYZ', 6);
 
@@ -64,19 +63,16 @@ WHERE id_licytacja = 6;
 
 DECLARE	@today_5 DATE;
 SELECT	@today_5 = GETDATE();
-
 INSERT INTO Oferty(data, godzina, kwota, login, id_licytacja)
 VALUES(@today_5, '17:15', 60, 'useruser', 6) -- kwota mniejsza ni¿ cena wyjœciowa
 
 DECLARE	@today_6 DATE;
 SELECT	@today_6 = GETDATE();
-
 INSERT INTO Oferty(data, godzina, kwota, login, id_licytacja)
 VALUES(@today_6, '19:11', 100, 'useruser', 6)
 
 DECLARE	@today_7 DATE;
 SELECT	@today_7 = GETDATE();
-
 INSERT INTO Oferty(data, godzina, kwota, login, id_licytacja)
 VALUES(@today_7, '21:11', 99, 'licytator123', 6) -- kwota nie przebija poprzedniej oferty
 
@@ -85,7 +81,6 @@ SELECT * FROM Licytacje;
 
 DECLARE	@today_8 DATE;
 SELECT	@today_8 = GETDATE();
-
 INSERT INTO Oferty(data, godzina, kwota, login, id_licytacja)
 VALUES(@today_8, '21:11', 9999, 'aukcjonerXYZ', 1)
 
